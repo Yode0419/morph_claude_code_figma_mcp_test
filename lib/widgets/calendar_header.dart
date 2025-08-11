@@ -6,7 +6,7 @@ import '../utils/colors.dart';
 import '../utils/date_utils.dart';
 
 class CalendarHeader extends StatelessWidget {
-  const CalendarHeader({Key? key}) : super(key: key);
+  const CalendarHeader({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -68,13 +68,13 @@ class CalendarHeader extends StatelessWidget {
           
           return GestureDetector(
             onTap: () => calendarProvider.selectDate(date),
-            child: Container(
+            child: SizedBox(
               width: 48,
               child: Column(
                 children: [
                   Text(
                     AppDateUtils.formatWeekday(date),
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 12,
                       color: AppColors.textSecondary,
                     ),

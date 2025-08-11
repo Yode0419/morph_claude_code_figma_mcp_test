@@ -7,9 +7,9 @@ class UsageFooter extends StatelessWidget {
   final VoidCallback onUpgrade;
 
   const UsageFooter({
-    Key? key,
+    super.key,
     required this.onUpgrade,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +20,7 @@ class UsageFooter extends StatelessWidget {
 
         return Container(
           padding: const EdgeInsets.all(16),
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             color: AppColors.background,
             border: Border(
               top: BorderSide(color: AppColors.divider),
@@ -50,7 +50,7 @@ class UsageFooter extends StatelessWidget {
                 onPressed: onUpgrade,
                 style: OutlinedButton.styleFrom(
                   foregroundColor: AppColors.primaryBlue,
-                  side: BorderSide(color: AppColors.primaryBlue),
+                  side: const BorderSide(color: AppColors.primaryBlue),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20),
                   ),

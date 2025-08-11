@@ -9,10 +9,10 @@ class TaskCard extends StatelessWidget {
   final VoidCallback onActionPressed;
 
   const TaskCard({
-    Key? key,
+    super.key,
     required this.task,
     required this.onActionPressed,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -49,7 +49,7 @@ class TaskCard extends StatelessWidget {
         Container(
           padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
           decoration: BoxDecoration(
-            color: AppColors.getStatusColor(task.statusText).withOpacity(0.2),
+            color: AppColors.getStatusColor(task.statusText).withValues(alpha: 0.2),
             borderRadius: BorderRadius.circular(12),
           ),
           child: Text(
@@ -87,7 +87,7 @@ class TaskCard extends StatelessWidget {
   Widget _buildAssignee(BuildContext context) {
     return Row(
       children: [
-        Icon(
+        const Icon(
           Icons.person_outline,
           size: 20,
           color: AppColors.primaryBlue,
@@ -127,7 +127,7 @@ class TaskCard extends StatelessWidget {
             label: Text(task.actionButtonText),
             style: OutlinedButton.styleFrom(
               foregroundColor: AppColors.textSecondary,
-              side: BorderSide(color: AppColors.divider),
+              side: const BorderSide(color: AppColors.divider),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(20),
               ),

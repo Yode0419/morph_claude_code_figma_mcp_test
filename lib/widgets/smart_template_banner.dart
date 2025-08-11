@@ -6,17 +6,17 @@ class SmartTemplateBanner extends StatelessWidget {
   final VoidCallback? onLearnMore;
 
   const SmartTemplateBanner({
-    Key? key,
+    super.key,
     this.onDismiss,
     this.onLearnMore,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        gradient: LinearGradient(
+        gradient: const LinearGradient(
           colors: [AppColors.purpleGradientStart, AppColors.purpleGradientEnd],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
@@ -31,7 +31,7 @@ class SmartTemplateBanner extends StatelessWidget {
             child: Icon(
               Icons.auto_awesome,
               size: 80,
-              color: Colors.white.withOpacity(0.2),
+              color: Colors.white.withValues(alpha: 0.2),
             ),
           ),
           Padding(
@@ -56,7 +56,7 @@ class SmartTemplateBanner extends StatelessWidget {
                           Container(
                             padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
                             decoration: BoxDecoration(
-                              color: Colors.white.withOpacity(0.2),
+                              color: Colors.white.withValues(alpha: 0.2),
                               borderRadius: BorderRadius.circular(12),
                             ),
                             child: const Text(

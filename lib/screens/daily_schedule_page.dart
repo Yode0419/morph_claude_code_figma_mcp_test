@@ -11,7 +11,7 @@ import '../widgets/smart_template_banner.dart';
 import '../widgets/usage_footer.dart';
 
 class DailySchedulePage extends StatefulWidget {
-  const DailySchedulePage({Key? key}) : super(key: key);
+  const DailySchedulePage({super.key});
 
   @override
   State<DailySchedulePage> createState() => _DailySchedulePageState();
@@ -77,12 +77,12 @@ class _DailySchedulePageState extends State<DailySchedulePage> {
           onPressed: () {},
           color: AppColors.primaryBlue,
         ),
-        Padding(
-          padding: const EdgeInsets.only(right: 8.0),
+        const Padding(
+          padding: EdgeInsets.only(right: 8.0),
           child: CircleAvatar(
             radius: 16,
             backgroundColor: AppColors.primaryBlue,
-            child: const Icon(
+            child: Icon(
               Icons.person,
               color: Colors.white,
               size: 20,
@@ -112,7 +112,7 @@ class _DailySchedulePageState extends State<DailySchedulePage> {
             Icon(
               Icons.event_note,
               size: 64,
-              color: AppColors.textSecondary.withOpacity(0.5),
+              color: AppColors.textSecondary.withValues(alpha: 0.5),
             ),
             const SizedBox(height: 16),
             Text(
